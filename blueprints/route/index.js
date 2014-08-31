@@ -5,6 +5,26 @@ var inflection  = require('inflection');
 var path        = require('path');
 
 module.exports = Blueprint.extend({
+  fileMapTokens: function() {
+    return {
+      templatepath: '__templatepath__',
+      templatename: '__templatename__'
+    };
+  },
+
+  fileMapTokenValues: function(options) {
+     return {
+      default: {
+        templatepath: 'templates',
+        templatename: options.entity.name
+      },
+      pods: {
+        templatepath: options.entity.name,
+        templatename: 'template'
+      }
+    };
+  },
+
   beforeInstall: function(options) {
     var type = options.type;
 

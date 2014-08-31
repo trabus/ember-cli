@@ -17,12 +17,13 @@ describe('.mapFile', function() {
 
   it('accepts locals.fileMap with multiple mappings',function(){
     var locals = {};
-    locals.fileMap= {
+    locals.filemap= {
       __name__: 'user',
       __type__: 'controller',
       __path__: 'pods/users',
       __plural__: ''
     };
+
     var path = Blueprint.prototype.mapFile('__name__/__type____plural__.js',locals);
     assert.equal(path,'user/controller.js');
 

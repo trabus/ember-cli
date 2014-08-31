@@ -38,8 +38,6 @@ describe('Blueprint', function() {
   beforeEach(function() {
     Blueprint.ignoredFiles = defaultIgnoredFiles;
   });
-/**
-  // moved to mapfile-test.js
 
   describe('.mapFile', function() {
     it('replaces all occurences of __name__ with module name',function(){
@@ -53,7 +51,6 @@ describe('Blueprint', function() {
       assert.equal(path,'my-blueprint/my-blueprint.js');
     });
   });
-*/
   describe('.lookup', function() {
     it('uses an explicit path if one is given', function() {
       var expectedClass = require(basicBlueprint);
@@ -122,6 +119,14 @@ describe('Blueprint', function() {
       }]);
     });
   });
+
+  /*
+  describe('.generateFileMap', function(){
+    it('returns a fileMap object', function(){
+      var fileMap = Blueprint.prototype.generateFileMap();
+    })
+  });
+  */
 
   it('exists', function() {
     var blueprint = new Blueprint(basicBlueprint);
