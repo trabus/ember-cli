@@ -18,8 +18,8 @@ module.exports = Blueprint.extend({
         templatepath: 'templates',
         templatename: options.entity.name
       },
-      pods: {
-        templatepath: options.entity.name,
+      pod: {
+        templatepath: options.podPath+options.entity.name,
         templatename: 'template'
       }
     };
