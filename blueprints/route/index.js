@@ -7,20 +7,17 @@ var path        = require('path');
 module.exports = Blueprint.extend({
   fileMapTokens: function() {
     return {
-      templatepath: '__templatepath__',
-      templatename: '__templatename__'
-    };
-  },
-
-  fileMapTokenValues: function(options) {
-     return {
-      default: {
-        templatepath: 'templates',
-        templatename: options.entity.name
+      __templatepath__: function(options) {
+        if (options.pods) {
+          return options.podPath+options.dasherizedModuleName;
+        }
+        return 'templates';
       },
-      pod: {
-        templatepath: options.podPath+options.entity.name,
-        templatename: 'template'
+      __templatename__: function(options) {
+        if (options.pods) {
+          return 'template';
+        }
+        return options.dasherizedModuleName;
       }
     };
   },

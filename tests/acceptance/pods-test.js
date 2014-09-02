@@ -7,6 +7,7 @@ var assertFile       = require('../helpers/assert-file');
 var assertFileEquals = require('../helpers/assert-file-equals');
 var conf             = require('../helpers/conf');
 var ember            = require('../helpers/ember');
+var fileUtils        = require('../helpers/file-utils');
 var fs               = require('fs-extra');
 var outputFile       = Promise.denodeify(fs.outputFile);
 var path             = require('path');
@@ -47,6 +48,7 @@ describe('Acceptance: ember generate pod', function() {
     var generateArgs = ['generate'].concat(args);
 
     return initApp().then(function() {
+      // ?? fileUtils.touch('app/app.js', {podModulePrefix: 'app/pods'});
       return ember(generateArgs);
     });
   }
