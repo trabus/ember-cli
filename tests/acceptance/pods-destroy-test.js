@@ -87,6 +87,16 @@ describe('Acceptance: ember destroy pod', function() {
       });
   }
 
+  it('controller foo -p', function() {
+    var commandArgs = ['controller', 'foo', '-p'];
+    var files       = [
+      'app/pods/foo/controller.js',
+      'tests/unit/controllers/foo-test.js'
+    ];
+
+    return assertDestroyAfterGenerate(commandArgs, files);
+  });
+
   it('controller foo --pod', function() {
     var commandArgs = ['controller', 'foo', '--pod'];
     var files       = [
