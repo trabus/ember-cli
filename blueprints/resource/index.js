@@ -20,6 +20,7 @@ module.exports = {
       analytics: this.analytics,
       project: this.project
     });
+    console.log('resource lookup',mainBlueprint.availableOptions)
 
     return Promise.resolve()
       .then(function() {

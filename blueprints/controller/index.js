@@ -11,12 +11,12 @@ module.exports = {
   description: 'Generates a controller of the given type.',
 
   availableOptions: [
-    { name: 'type', values: ['basic', 'object', 'array'], default: 'basic' }
+    { name: 'type', type: String, values: ['basic', 'object', 'array'], default: 'basic', aliases: [{'b':'basic'}, {'o':'object'}, {'a':'array'}] }
   ],
 
   beforeInstall: function(options) {
-    var type = options.type;
-
+    var type = options.options.type;
+    console.log('controller opts',options)
     if (type && !TYPE_MAP[type]) {
       throw new SilentError('Unknown controller type "' + type + '". Should be "basic", "object", or "array".');
     }
