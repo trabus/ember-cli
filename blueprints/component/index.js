@@ -1,11 +1,12 @@
 /*jshint node:true*/
 
-var Blueprint          = require('../../lib/models/blueprint');
-var stringUtil         = require('../../lib/utilities/string');
-var pathUtil           = require('../../lib/utilities/path');
-var validComponentName = require('../../lib/utilities/valid-component-name');
-var getPathOption      = require('../../lib/utilities/get-component-path-option');
-var path               = require('path');
+var Blueprint                  = require('../../lib/models/blueprint');
+var stringUtil                 = require('../../lib/utilities/string');
+var pathUtil                   = require('../../lib/utilities/path');
+var validComponentName         = require('../../lib/utilities/valid-component-name');
+var getPathOption              = require('../../lib/utilities/get-component-path-option');
+var addPackageTemplateCompiler = require('../../lib/utilities/add-package-template-compiler');
+var path                       = require('path');
 
 module.exports = {
   description: 'Generates a component. Name must contain a hyphen.',
@@ -71,5 +72,14 @@ module.exports = {
       contents: contents,
       path: getPathOption(options)
     };
+  },
+  
+  afterInstall: function(options) {
+  console.log('afterrrrr')
+    if (options.project.isEmberCLIAddon() || options.inRepoAddon) {
+      var projectRoot = options.inRepoAddon ? path.join(this.project.root, 'lib', options.inRepoAddon) : this.project.root;
+      
+      return addPackageTemplateCompiler(projectRoot);
+    }
   }
 };
