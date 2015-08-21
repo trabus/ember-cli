@@ -72,5 +72,12 @@ module.exports = {
       contents: contents,
       path: getPathOption(options)
     };
+  },
+
+  afterInstall: function(options) {
+    if (options.project.isEmberCLIAddon() || options.inRepoAddon) {
+      return this.addPackageToProject('ember-cli-htmlbars', "0.7.9");
+    }
+    return;
   }
 };
