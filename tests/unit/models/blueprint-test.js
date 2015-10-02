@@ -1640,9 +1640,9 @@ describe('Blueprint', function() {
     });
 
     it('can find internal blueprints', function() {
-      var result = blueprint.lookupBlueprint('controller');
+      var result = blueprint.lookupBlueprint('lib');
 
-      expect(result.description).to.equal('Generates a controller.');
+      expect(result.description).to.equal('Generates a lib directory for in-repo addons.');
     });
   });
 

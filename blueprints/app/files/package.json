@@ -19,6 +19,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "ember-cli-legacy-blueprints": "*",
     "broccoli-asset-rev": "^2.1.2",
     "ember-ajax": "0.6.2",
     "ember-cli": "<%= emberCLIVersion %>",

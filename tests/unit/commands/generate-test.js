@@ -103,6 +103,28 @@ describe('generate command', function() {
       var testString = processHelpString(EOL + '\
   Available blueprints:' + EOL + '\
     ember-cli:' + EOL + '\
+      addon \u001b[33m<name>\u001b[39m' + EOL + '\
+        \u001b[90mThe default blueprint for ember-cli addons.\u001b[39m' + EOL + '\
+      addon-import \u001b[33m<name>\u001b[39m' + EOL + '\
+        \u001b[90mGenerates an import wrapper.\u001b[39m' + EOL + '\
+      app \u001b[33m<name>\u001b[39m' + EOL + '\
+        \u001b[90mThe default blueprint for ember-cli projects.\u001b[39m' + EOL + '\
+      blueprint \u001b[33m<name>\u001b[39m' + EOL + '\
+        \u001b[90mGenerates a blueprint and definition.\u001b[39m' + EOL + '\
+      http-mock \u001b[33m<endpoint-path>\u001b[39m' + EOL + '\
+        \u001b[90mGenerates a mock api endpoint in /api prefix.\u001b[39m' + EOL + '\
+      http-proxy \u001b[33m<local-path>\u001b[39m \u001b[33m<remote-url>\u001b[39m' + EOL + '\
+        \u001b[90mGenerates a relative proxy to another server.\u001b[39m' + EOL + '\
+      in-repo-addon \u001b[33m<name>\u001b[39m' + EOL + '\
+        \u001b[90mThe blueprint for addon in repo ember-cli addons.\u001b[39m' + EOL + '\
+      lib \u001b[33m<name>\u001b[39m' + EOL + '\
+        \u001b[90mGenerates a lib directory for in-repo addons.\u001b[39m' + EOL + '\
+      server \u001b[33m<name>\u001b[39m' + EOL + '\
+        \u001b[90mGenerates a server directory for mocks and proxies.\u001b[39m' + EOL + EOL);
+      
+      /*processHelpString(EOL + '\
+  Available blueprints:' + EOL + '\
+    ember-cli:' + EOL + '\
       acceptance-test \u001b[33m<name>\u001b[39m' + EOL + '\
         \u001b[90mGenerates an acceptance test for a feature.\u001b[39m' + EOL + '\
       adapter \u001b[33m<name>\u001b[39m \u001b[36m<options...>\u001b[39m' + EOL + '\
@@ -196,7 +218,7 @@ describe('generate command', function() {
         \u001b[90mGenerates a view subclass.\u001b[39m' + EOL + '\
       view-test \u001b[33m<name>\u001b[39m' + EOL + '\
         \u001b[90mGenerates a view unit test.\u001b[39m' + EOL + '\
-' + EOL);
+' + EOL);*/
 
       expect(output).to.equal(testString);
     });
