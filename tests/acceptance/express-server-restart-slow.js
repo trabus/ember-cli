@@ -4,8 +4,8 @@ var path                = require('path');
 var expect              = require('chai').expect;
 var fs                  = require('fs-extra');
 var Promise             = require('../../lib/ext/promise');
-var acceptance          = require('../helpers/acceptance');
-var runCommand          = require('../helpers/run-command');
+var acceptance          = require('ember-cli-internal-test-helpers/lib/helpers/acceptance');
+var runCommand          = require('ember-cli-internal-test-helpers/lib/helpers/run-command');
 var remove              = Promise.denodeify(fs.remove);
 var createTestTargets   = acceptance.createTestTargets;
 var teardownTestTargets = acceptance.teardownTestTargets;
@@ -13,8 +13,8 @@ var linkDependencies    = acceptance.linkDependencies;
 var cleanupRun          = acceptance.cleanupRun;
 
 
-var copyFixtureFiles = require('../helpers/copy-fixture-files');
-var assertDirEmpty   = require('../helpers/assert-dir-empty');
+var copyFixtureFiles = require('ember-cli-internal-test-helpers/lib/helpers/copy-fixture-files');
+var assertDirEmpty   = require('ember-cli-internal-test-helpers/lib/helpers/assert-dir-empty');
 
 // skipped because brittle. needs some TLC
 describe.skip('Acceptance: express server restart', function () {

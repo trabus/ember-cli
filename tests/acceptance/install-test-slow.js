@@ -3,8 +3,8 @@
 'use strict';
 
 var Promise    = require('../../lib/ext/promise');
-var assertFile = require('../helpers/assert-file');
-var conf       = require('../helpers/conf');
+var assertFile = require('ember-cli-internal-test-helpers/lib/helpers/assert-file');
+var conf       = require('ember-cli-internal-test-helpers/lib/helpers/conf');
 var ember      = require('../helpers/ember');
 var path       = require('path');
 var remove     = Promise.denodeify(require('fs-extra').remove);

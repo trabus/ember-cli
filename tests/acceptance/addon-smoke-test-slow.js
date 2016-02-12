@@ -10,12 +10,12 @@ var chalk      = require('chalk');
 var expect     = require('chai').expect;
 
 var symlinkOrCopySync   = require('symlink-or-copy').sync;
-var runCommand          = require('../helpers/run-command');
 var ember               = require('../helpers/ember');
-var copyFixtureFiles    = require('../helpers/copy-fixture-files');
-var killCliProcess      = require('../helpers/kill-cli-process');
-var assertDirEmpty      = require('../helpers/assert-dir-empty');
-var acceptance          = require('../helpers/acceptance');
+var runCommand          = require('ember-cli-internal-test-helpers/lib/helpers/run-command');
+var copyFixtureFiles    = require('ember-cli-internal-test-helpers/lib/helpers/copy-fixture-files');
+var killCliProcess      = require('ember-cli-internal-test-helpers/lib/helpers/kill-cli-process');
+var assertDirEmpty      = require('ember-cli-internal-test-helpers/lib/helpers/assert-dir-empty');
+var acceptance          = require('ember-cli-internal-test-helpers/lib/helpers/acceptance');
 var createTestTargets   = acceptance.createTestTargets;
 var teardownTestTargets = acceptance.teardownTestTargets;
 var linkDependencies    = acceptance.linkDependencies;

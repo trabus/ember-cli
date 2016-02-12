@@ -3,11 +3,11 @@
 'use strict';
 
 var Promise          = require('../../lib/ext/promise');
-var assertFile       = require('../helpers/assert-file');
-var assertFileEquals = require('../helpers/assert-file-equals');
-var conf             = require('../helpers/conf');
+var assertFile       = require('ember-cli-internal-test-helpers/lib/helpers/assert-file');
+var assertFileEquals = require('ember-cli-internal-test-helpers/lib/helpers/assert-file-equals');
+var conf             = require('ember-cli-internal-test-helpers/lib/helpers/conf');
 var ember            = require('../helpers/ember');
-var replaceFile      = require('../helpers/file-utils').replaceFile;
+var replaceFile      = require('ember-cli-internal-test-helpers/lib/helpers/file-utils').replaceFile;
 var fs               = require('fs-extra');
 var outputFile       = Promise.denodeify(fs.outputFile);
 var path             = require('path');

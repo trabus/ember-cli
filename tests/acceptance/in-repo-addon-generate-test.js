@@ -3,10 +3,10 @@
 'use strict';
 
 var Promise              = require('../../lib/ext/promise');
-var assertFile           = require('../helpers/assert-file');
-var assertFileEquals     = require('../helpers/assert-file-equals');
-var assertFileToNotExist = require('../helpers/assert-file-to-not-exist');
-var conf                 = require('../helpers/conf');
+var assertFile           = require('ember-cli-internal-test-helpers/lib/helpers/assert-file');
+var assertFileEquals     = require('ember-cli-internal-test-helpers/lib/helpers/assert-file-equals');
+var assertFileToNotExist = require('ember-cli-internal-test-helpers/lib/helpers/assert-file-to-not-exist');
+var conf                 = require('ember-cli-internal-test-helpers/lib/helpers/conf');
 var ember                = require('../helpers/ember');
 var fs                   = require('fs-extra');
 var path                 = require('path');

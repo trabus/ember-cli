@@ -6,7 +6,7 @@ var fs         = require('fs');
 var path       = require('path');
 var Project    = require('../../../lib/models/project');
 var expect     = require('chai').expect;
-var stub       = require('../../helpers/stub').stub;
+var stub       = require('ember-cli-internal-test-helpers/lib/helpers/stub').stub;
 var proxyquire = require('proxyquire');
 
 var MockUI = require('../../helpers/mock-ui');

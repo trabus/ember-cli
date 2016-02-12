@@ -4,12 +4,12 @@
 
 var Promise     = require('../../lib/ext/promise');
 var expect      = require('chai').expect;
-var assertFile  = require('../helpers/assert-file');
-var conf        = require('../helpers/conf');
+var assertFile  = require('ember-cli-internal-test-helpers/lib/helpers/assert-file');
+var conf        = require('ember-cli-internal-test-helpers/lib/helpers/conf');
 var ember       = require('../helpers/ember');
 var existsSync  = require('exists-sync');
 var fs          = require('fs-extra');
-var replaceFile = require('../helpers/file-utils').replaceFile;
+var replaceFile = require('ember-cli-internal-test-helpers/lib/helpers/file-utils').replaceFile;
 var outputFile  = Promise.denodeify(fs.outputFile);
 var path        = require('path');
 var remove      = Promise.denodeify(fs.remove);

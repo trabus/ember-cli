@@ -2,7 +2,7 @@
 
 var EOL           = require('os').EOL;
 var expect        = require('chai').expect;
-var stub          = require('../../helpers/stub');
+var stub          = require('ember-cli-internal-test-helpers/lib/helpers/stub');
 var MockUI        = require('../../helpers/mock-ui');
 var MockAnalytics = require('../../helpers/mock-analytics');
 var CLI           = require('../../../lib/cli/cli');

@@ -1,7 +1,7 @@
 'use strict';
 
 var expect         = require('chai').expect;
-var stub           = require('../../helpers/stub');
+var stub           = require('ember-cli-internal-test-helpers/lib/helpers/stub');
 var MockProject    = require('../../helpers/mock-project');
 var commandOptions = require('../../factories/command-options');
 var Task           = require('../../../lib/models/task');

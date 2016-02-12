@@ -3,7 +3,7 @@
 var expect         = require('chai').expect;
 var EOL            = require('os').EOL;
 var proxyquire     = require('proxyquire');
-var stub           = require('../../helpers/stub');
+var stub           = require('ember-cli-internal-test-helpers/lib/helpers/stub');
 var commandOptions = require('../../factories/command-options');
 var Task           = require('../../../lib/models/task');
 

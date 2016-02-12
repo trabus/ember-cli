@@ -7,10 +7,10 @@ var remove     = Promise.denodeify(fs.remove);
 
 var expect     = require('chai').expect;
 
-var runCommand          = require('../helpers/run-command');
-var acceptance          = require('../helpers/acceptance');
-var copyFixtureFiles    = require('../helpers/copy-fixture-files');
-var assertDirEmpty      = require('../helpers/assert-dir-empty');
+var runCommand          = require('ember-cli-internal-test-helpers/lib/helpers/run-command');
+var acceptance          = require('ember-cli-internal-test-helpers/lib/helpers/acceptance');
+var copyFixtureFiles    = require('ember-cli-internal-test-helpers/lib/helpers/copy-fixture-files');
+var assertDirEmpty      = require('ember-cli-internal-test-helpers/lib/helpers/assert-dir-empty');
 var existsSync          = require('exists-sync');
 var createTestTargets   = acceptance.createTestTargets;
 var teardownTestTargets = acceptance.teardownTestTargets;
