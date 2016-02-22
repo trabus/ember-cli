@@ -2,7 +2,7 @@
 
 var expect = require('chai').expect;
 var fs = require('fs-extra');
-var tmp = require('../../helpers/tmp');
+var tmp = require('ember-cli-internal-test-helpers/lib/helpers/tmp');
 var findBuildFile = require('../../../lib/utilities/find-build-file');
 
 describe('find-build-file', function() {

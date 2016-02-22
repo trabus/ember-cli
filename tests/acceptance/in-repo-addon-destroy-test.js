@@ -4,8 +4,8 @@
 
 var Promise    = require('../../lib/ext/promise');
 var expect     = require('chai').expect;
-var assertFile = require('../helpers/assert-file');
-var conf       = require('../helpers/conf');
+var assertFile = require('ember-cli-internal-test-helpers/lib/helpers/assert-file');
+var conf       = require('ember-cli-internal-test-helpers/lib/helpers/conf');
 var ember      = require('../helpers/ember');
 var existsSync = require('exists-sync');
 var fs         = require('fs-extra');
